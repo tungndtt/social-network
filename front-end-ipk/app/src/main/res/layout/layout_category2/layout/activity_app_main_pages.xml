@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:id="@+id/drawerLayout">
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="false">
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:fitsSystemWindows="true">
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/toolbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:contentScrim="@color/primaryColor"
+                app:layout_scrollFlags="scroll|enterAlways"
+                android:fitsSystemWindows="false"
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_collapseMode="parallax"
+                    app:layout_collapseParallaxMultiplier="0"
+                    android:animateLayoutChanges="true">
+                    <com.google.android.material.appbar.MaterialToolbar
+                        android:id="@+id/actionBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                      >
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/profileBtn"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginVertical="2dp"
+                            android:src="@drawable/ic_person_gray_24"
+                            android:scaleType="fitXY"
+                            android:layout_gravity="right|center_vertical" />
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/matchingBtn"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginVertical="2dp"
+                            android:background="@drawable/ic_group_add_24"
+                            android:scaleType="fitXY"
+                            android:layout_gravity="right|center_vertical"/>
+
+                    </com.google.android.material.appbar.MaterialToolbar>
+                    <com.google.android.material.bottomnavigation.BottomNavigationView
+                        android:id="@+id/navBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/cardview_light_background"
+                        android:layout_below="@id/actionBar"
+                        app:menu="@menu/mainpage_navbar"
+                        app:labelVisibilityMode="labeled" />
+                </RelativeLayout>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mainPageLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".Activity_Login_Signup"
+            app:layout_anchor="@id/appBar"
+            app:layout_anchorGravity="bottom|end"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:overScrollMode="never">
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/refreshLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <FrameLayout
+                    android:id="@+id/mainPageContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/navBar"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/naviagtion_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        android:layout_gravity="start"
+        app:menu="@menu/mainpage_navview"
+>
+    </com.google.android.material.navigation.NavigationView>
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

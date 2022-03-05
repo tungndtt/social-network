@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/mediasurfing"
+        android:icon="@drawable/selector_navbar_home"
+        android:title="@string/text_spaces" />
+    <item
+        android:id="@+id/notification"
+        android:icon="@drawable/selector_navbar_notification"
+        android:title="@string/text_spaces"/>
+    <item
+        android:id="@+id/messagers"
+        android:icon="@drawable/selector_navbar_chatroom"
+        android:title="@string/text_spaces"/>
+</menu>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="transparent">@android:color/transparent</color>
+    <color name = "light_black">#4D000000</color>
+    <color name="red">#F44336</color>
+    <color name = "blue">#3B56DC</color>
+    <color name="darkGray">#A9A9A9</color>
+
+    <color name="primaryColor">@color/black</color>
+    <color name="primaryOnColor">#FFFFFFFF</color>
+
+    <color name="primaryDarkColor">@color/black</color>
+    <color name="secondaryColor">@color/darkGray</color>
+
+    <color name="iconSecondaryColor">@color/blue</color>
+    <color name="secondaryBlue">#81b7d2</color>
+    <color name="shadow">#B3000000</color>
+    <!--deletable -->
+</resources>

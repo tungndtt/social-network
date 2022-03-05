@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/refresh"
+        android:icon="@drawable/ic_refresh_24"
+        android:title="Refresh"
+        app:showAsAction="withText"/>
+    <item
+        android:id="@+id/logout"
+        android:icon="@drawable/ic_logout_24"
+        android:title="Logout"
+        app:showAsAction="withText"/>
+    <item android:id="@+id/change_password"
+        android:icon="@drawable/ic_key"
+        android:title="Change password"
+        app:showAsAction="withText" />
+    <item android:id="@+id/privacy_policy_item"
+        android:title="Privacy Policy"
+        android:icon="@drawable/ic_privacy_24"
+        app:showAsAction="withText"/>
+
+</menu>

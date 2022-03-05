@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="One_side_Rounded" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">0%</item>
+        <item name="cornerSizeTopLeft">30%</item>
+        <item name="cornerSizeBottomRight">0%</item>
+        <item name="cornerSizeBottomLeft">30%</item>
+    </style>
+    !-- Animations for a non-full-screen window or activity. -->
+    <style name="MyAnimation.Window" parent="@android:style/Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/animation_in</item>
+        <item name="android:windowExitAnimation">@anim/animation_out</item>
+    </style>
+
+    <style name="PasswordResetEditText">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginHorizontal">16dp</item>
+        <item name="android:layout_marginTop">24dp</item>
+        <item name="android:drawablePadding">16dp</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="android:inputType">textPassword</item>
+    </style>
+
+    <style name="SignUpLayout">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginHorizontal">54dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+    </style>
+
+    <style name="Headings">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">sans-serif-black</item>
+        <item name="android:textSize">@dimen/textSize_18</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:typeface">serif</item>
+    </style>
+
+    <style name="info_view_style2">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="android:layout_marginHorizontal">16dp</item>
+        <item name="android:background">@android:color/darker_gray</item>
+    </style>
+
+    <style name="info_sub_textview_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/textSize_16</item>
+        <item name="android:layout_marginTop">8dp</item>
+    </style>
+
+    <style name="UserInfoTitles" parent="Headings">
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+
+    <!-- MATERIAL RADIOBUTTON-->
+    <style name="RadioButtonStyle" parent="Widget.MaterialComponents.CompoundButton.RadioButton">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.RadioButton</item>
+    </style>
+
+    <style name="ThemeOverlay.App.RadioButton" parent="">
+        <item name="colorOnSurface">@color/secondaryColor</item>
+        <item name="colorAccent">@color/primaryColor</item>
+    </style>
+    <!-- MATERIAL RADIOBUTTON END-->
+
+    <!-- MATERIAL OUTLINED-BUTTON-->
+        <style name="MaterialButtonOutlinedStyle" parent="Widget.MaterialComponents.Button.OutlinedButton">
+            <item name="strokeColor">@color/secondaryColor</item> <!--@color/secondaryColor #81b7d2-->
+        </style>
+    <!-- MATERIAL OUTLINED-BUTTON END-->
+
+    <!-- BOTTOM-NAVIGATION -->
+    <style name="MaterialBottomNavigation" parent="Widget.MaterialComponents.BottomNavigationView">
+       <item name="itemIconTint">@drawable/icon_state</item>
+    </style>
+    <!-- BOTTOM-NAVIGATION END-->
+
+    <!-- MATERIAL TOOLBAR -->
+    <style name="MaterialToolbar" parent="Widget.MaterialComponents.Toolbar">
+        <item name="android:background">@color/white</item> <!--@color/primaryColor -->
+        <item name="titleTextColor">@color/black</item> <!--@color/primaryTextColor -->
+    </style>
+    <!-- MATERIAL TOOLBAR END -->
+
+    <style name="ButtonColorStates">
+        <item name="backgroundTint">@drawable/state_button_enabled</item>
+    </style>
+
+
+    <!--  ______________NOT USED ATM____________________________ -->
+    <!-- _______________________________________________________________ -->
+
+</resources>

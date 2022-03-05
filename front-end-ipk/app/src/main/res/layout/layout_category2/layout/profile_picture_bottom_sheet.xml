@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+
+    <TextView
+        android:id="@+id/bottom_sheet_view_photo"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="View Profile Picture"
+        android:textSize="@dimen/textSize_16"
+        android:textStyle="bold"
+        android:drawableLeft="@drawable/ic_info"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:drawablePadding="24dp"
+        android:gravity="start|center_vertical"
+        />
+
+    <TextView
+        android:id="@+id/bottom_sheet_select_photo"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Select Profile Picture"
+        android:textSize="@dimen/textSize_16"
+        android:textStyle="bold"
+        android:drawableLeft="@drawable/ic_photo_library_24"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:drawablePadding="24dp"
+        android:gravity="start|center_vertical"
+
+        />
+
+    <TextView
+        android:id="@+id/bottom_sheet_add_photo"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Add Profile Picture"
+        android:textSize="@dimen/textSize_16"
+        android:textStyle="bold"
+        android:drawableLeft="@drawable/ic_camera"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+
+        android:drawablePadding="24dp"
+        android:gravity="start|center_vertical"
+        />
+
+
+</LinearLayout>

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/nameInput"
+            style="@style/SignUpLayout"
+            android:hint="@string/name"
+            android:singleLine="true"
+            android:maxLength="15"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/register_dateTV"
+            style="@style/Headings"
+            android:text="@string/date_of_birth"
+
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@id/nameInput"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+
+        <TextView
+            android:id="@+id/dayofbirth_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="54dp"
+            android:layout_marginTop="8dp"
+            android:ems="4"
+            android:hint="@string/day"
+
+            app:layout_constraintEnd_toStartOf="@+id/dayofbirth_month"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/register_dateTV" />
+
+        <TextView
+            android:id="@+id/dayofbirth_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="4"
+            android:hint="@string/month"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toStartOf="@id/dayofbirth_year"
+            app:layout_constraintStart_toEndOf="@+id/dayofbirth_date"
+            app:layout_constraintTop_toBottomOf="@+id/register_dateTV" />
+
+        <TextView
+            android:id="@+id/dayofbirth_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="54dp"
+            android:ems="4"
+            android:hint="@string/year"
+            android:layout_marginTop="8dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/dayofbirth_month"
+            app:layout_constraintTop_toBottomOf="@+id/register_dateTV" />
+
+
+        <TextView
+            android:id="@+id/register_gender"
+            style="@style/Headings"
+            android:text="@string/Gender"
+            android:layout_marginTop="24dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dayofbirth_month" />
+
+        <RadioGroup
+            android:id="@+id/register_gender_group"
+            style="@style/SignUpLayout"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/register_gender">
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/sign_up_male"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:text="Male" />
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/sign_up_female"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:text="Female" />
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/sign_up_divers"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:text="Divers" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/register_interestsTV"
+            style="@style/Headings"
+            android:layout_marginTop="24dp"
+            android:text="@string/interests"
+            app:layout_constraintTop_toBottomOf="@id/register_gender_group"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/register_interests_inputTV"
+            style="@style/SignUpLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/register_interestsTV"
+            android:maxLines="2"
+            android:gravity="center"
+
+            tools:text="Gaming, .."
+            android:layout_marginTop="8dp"
+            />
+
+        <EditText
+            android:id="@+id/emailInput"
+            style="@style/SignUpLayout"
+            android:layout_marginTop="16dp"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/register_interests_inputTV" />
+
+        <EditText
+            android:id="@+id/passInputConfirm"
+            style="@style/SignUpLayout"
+            android:hint="@string/hint_retype_password"
+            android:inputType="textPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/passInput" />
+
+        <EditText
+            android:id="@+id/passInput"
+            style="@style/SignUpLayout"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/emailInput" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/sign_upButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:drawableEnd="@drawable/ic_send"
+            android:text="@string/register"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/passInputConfirm" />
+
+        <ProgressBar
+            android:id="@+id/sign_up_progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/WrongInput_warning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            tools:text="Name cannot be empty"
+            android:textColor="@android:color/holo_red_light"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sign_upButton" />
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            tools:text="current nw state"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/WrongInput_warning"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

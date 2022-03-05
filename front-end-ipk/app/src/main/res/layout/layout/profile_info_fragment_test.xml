@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/profile_email_text"
+        style="@style/UserInfoTitles"
+        android:text="@string/email"
+        app:layout_constraintBottom_toTopOf="@+id/profile_email"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/profile_email"
+        style="@style/info_sub_textview_style"
+        android:layout_width="0dp"
+        android:layout_marginHorizontal="16dp"
+        android:drawableStart="@drawable/ic_email_black_24"
+        android:drawablePadding="16dp"
+        android:gravity="center_vertical"
+        app:layout_constraintBottom_toTopOf="@+id/divider_0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_email_text"
+        tools:text="a@test.com" />
+
+    <View
+        android:id="@+id/divider_0"
+        style="@style/info_view_style2"
+        app:layout_constraintBottom_toTopOf="@+id/profile_age_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_email" />
+
+    <TextView
+        android:id="@+id/profile_age_text"
+        style="@style/UserInfoTitles"
+        android:text="@string/age"
+        app:layout_constraintBottom_toTopOf="@+id/profile_age"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider_0" />
+
+    <TextView
+        android:id="@+id/profile_birthday"
+        style="@style/info_sub_textview_style"
+        android:layout_marginHorizontal="16dp"
+        app:layout_constraintBottom_toTopOf="@id/divider_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_age_text"
+        android:drawableStart="@drawable/ic_cake_24"
+        android:drawablePadding="16dp"
+        android:gravity="center"
+        tools:text="02.03.2021" />
+
+    <TextView
+        android:id="@+id/profile_birthday_editBtn"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        android:minHeight="1dp"
+        android:text="edit"
+        android:textAllCaps="false"
+        android:textColor="@color/iconSecondaryColor"
+        android:textSize="@dimen/textSize_12"
+        app:layout_constraintBottom_toBottomOf="@+id/profile_age_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/profile_guideline"
+        app:layout_constraintTop_toTopOf="@+id/profile_age_text" />
+
+    <View
+        android:id="@+id/divider_1"
+        style="@style/info_view_style2"
+        app:layout_constraintBottom_toTopOf="@+id/profile_gender_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_birthday" />
+
+    <TextView
+        android:id="@+id/profile_gender_text"
+        style="@style/UserInfoTitles"
+        android:text="@string/Gender"
+        app:layout_constraintBottom_toTopOf="@+id/profile_gender_showTV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider_1" />
+
+    <TextView
+        android:id="@+id/profile_gender_showTV"
+        style="@style/info_sub_textview_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="my gender"
+        android:visibility="gone"
+        android:layout_marginStart="16dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_gender_text"
+        app:layout_constraintBottom_toTopOf="@id/profile_gender"
+        />
+
+    <Spinner
+        android:id="@+id/profile_gender"
+        style="@style/info_sub_textview_style"
+        android:gravity="center"
+        android:visibility="visible"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/divider_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_gender_showTV" />
+
+    <View
+        android:id="@+id/divider_2"
+        style="@style/info_view_style2"
+        app:layout_constraintBottom_toTopOf="@+id/profile_description_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_gender" />
+
+    <TextView
+        android:id="@+id/profile_description_text"
+        style="@style/UserInfoTitles"
+        android:text="@string/description"
+        app:layout_constraintBottom_toTopOf="@+id/profile_description"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider_2" />
+
+    <EditText
+        android:id="@+id/profile_description"
+        style="@style/info_sub_textview_style"
+        android:background="@color/transparent"
+        tools:text="0123456789012345678901234567890123456789"
+        android:maxLength="40"
+        android:layout_width="0dp"
+        android:layout_marginHorizontal="16dp"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/divider_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_description_text" />
+
+    <View
+        android:id="@+id/divider_3"
+        style="@style/info_view_style2"
+        app:layout_constraintBottom_toTopOf="@+id/profile_interest_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_description" />
+
+    <TextView
+        android:id="@+id/profile_interest_text"
+        style="@style/UserInfoTitles"
+        android:layout_marginStart="16dp"
+        android:text="@string/interests"
+        app:layout_constraintBottom_toTopOf="@+id/profile_interest_addBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider_3" />
+
+    <TextView
+        android:id="@+id/profile_interest_addBtn"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        android:text="@string/add"
+        android:textAllCaps="false"
+        android:textColor="@color/iconSecondaryColor"
+        android:textSize="@dimen/textSize_12"
+        app:layout_constraintStart_toEndOf="@id/profile_guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/profile_interest_text"
+        app:layout_constraintBottom_toBottomOf="@id/profile_interest_text"
+        />
+
+    <TextView
+        android:id="@+id/profile_interest"
+        style="@style/info_sub_textview_style"
+        android:layout_width="0dp"
+        android:layout_marginHorizontal="16dp"
+        tools:text="interests"
+        android:lineSpacingExtra="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_interest_text"
+        app:layout_constraintBottom_toTopOf="@id/profile_edit_profile_button"/>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/profile_edit_profile_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+
+        android:drawableLeft="@drawable/ic_edit"
+        android:text="@string/edit_profile"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_interest" />
+
+
+    <ProgressBar
+        android:id="@+id/profile_progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/profile_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="64dp"
+
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

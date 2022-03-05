@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/view_profile_age_title"
+        style="@style/UserInfoTitles"
+        android:text="@string/age"
+        app:layout_constraintBottom_toTopOf="@+id/view_profile_age"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/view_profile_age"
+        style="@style/info_sub_textview_style"
+        android:text="age"
+        android:layout_marginHorizontal="16dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/view_profile_divider_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_profile_age_title" />
+
+
+    <View
+        android:id="@+id/view_profile_divider_1"
+        style="@style/info_view_style2"
+        app:layout_constraintBottom_toTopOf="@+id/view_profile_gender_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_profile_age" />
+
+    <TextView
+        android:id="@+id/view_profile_gender_title"
+        style="@style/UserInfoTitles"
+        android:text="@string/Gender"
+        app:layout_constraintBottom_toTopOf="@+id/view_profile_gender"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_profile_divider_1" />
+
+    <TextView
+        android:id="@+id/view_profile_gender"
+        style="@style/info_sub_textview_style"
+        android:gravity="center"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/view_profile_divider_2"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_profile_gender_title"
+        tools:text="myGender" />
+
+    <View
+        android:id="@+id/view_profile_divider_2"
+        style="@style/info_view_style2"
+        app:layout_constraintBottom_toTopOf="@+id/view_profile_description_title"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_profile_gender" />
+
+    <TextView
+        android:id="@+id/view_profile_description_title"
+        style="@style/UserInfoTitles"
+        android:text="@string/description"
+        app:layout_constraintBottom_toTopOf="@+id/view_profile_description"
+
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_profile_divider_2" />
+
+    <TextView
+        android:id="@+id/view_profile_description"
+        style="@style/info_sub_textview_style"
+        android:gravity="left"
+        android:layout_marginHorizontal="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/view_profile_divider_3"
+
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_profile_description_title"
+        tools:text="my inspirational quote" />
+
+    <View
+        android:id="@+id/view_profile_divider_3"
+        style="@style/info_view_style2"
+        app:layout_constraintBottom_toTopOf="@+id/view_profile_interest_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_profile_description" />
+
+    <TextView
+        android:id="@+id/view_profile_interest_title"
+        style="@style/UserInfoTitles"
+        android:text="@string/interests"
+        app:layout_constraintBottom_toTopOf="@+id/view_profile_interest"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_profile_divider_3" />
+
+
+    <TextView
+        android:id="@+id/view_profile_interest"
+        style="@style/info_sub_textview_style"
+        android:layout_marginHorizontal="16dp"
+        android:gravity="left"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_profile_interest_title"
+        tools:text="interests" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

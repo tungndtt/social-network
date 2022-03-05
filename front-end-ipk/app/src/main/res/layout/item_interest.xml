@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_interest_cardview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="40dp"
+    android:layout_marginTop="2dp"
+    android:layout_marginBottom="2dp"
+
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/item_interest_RL"
+        >
+        <ImageView
+            android:id="@+id/item_interest_image"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:padding="2dp"
+            android:layout_centerVertical="true"
+            />
+        <TextView
+            android:id="@+id/item_interest_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginStart="8dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/item_interest_image"
+            android:text="interest"
+            android:gravity="center"
+            />
+
+    </RelativeLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

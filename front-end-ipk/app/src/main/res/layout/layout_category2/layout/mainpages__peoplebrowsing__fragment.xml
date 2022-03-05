@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/transparent">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/loadmoreBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get more?"
+        android:textSize="12sp"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:backgroundTint="@color/darkGray"></com.google.android.material.button.MaterialButton>
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/people_matching_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/white"
+        android:elevation="4dp"
+        android:theme="@style/Theme.TinTok"
+        app:titleMarginStart="0dp"
+        app:contentInsetStartWithNavigation="0dp"
+        app:navigationIcon="@drawable/ic_backspace"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="48dp"
+            >
+
+            <ImageButton
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:id="@+id/filter_icon"
+                android:src="@drawable/ic_filter_black"
+                android:backgroundTint="@color/white"
+                android:scaleType="fitXY"
+                android:padding="0dp"
+                android:adjustViewBounds="true"
+                android:layout_marginEnd="8dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                />
+        </RelativeLayout>
+
+
+    </com.google.android.material.appbar.MaterialToolbar>
+    <com.yuyakaido.android.cardstackview.CardStackView
+        android:id="@+id/card_stack_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:background="@color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/people_matching_toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/buttonGroup"/>
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/buttonGroup"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="4dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        android:backgroundTint="@color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_stack_view">
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="2"
+                android:padding="12dp"
+                android:scaleType="fitXY"
+                android:id="@+id/dislikeBtn"
+                android:src="@drawable/ic_thumb_down_24"
+                android:background="@drawable/round_button_shape"
+                />
+
+
+        <ImageButton
+            android:id="@+id/profileBtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="2"
+            android:padding="0dp"
+            android:src="@drawable/ic_person_white_24"
+            android:background="@drawable/round_button_shape"
+            android:scaleType="fitXY"/>
+
+        <ImageButton
+            android:id="@+id/likeBtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="2"
+            android:padding="12dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_like_blue_24"
+            android:background="@drawable/round_button_shape"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

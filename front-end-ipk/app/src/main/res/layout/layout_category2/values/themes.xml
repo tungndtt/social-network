@@ -1,0 +1,32 @@
+<resources>
+
+
+
+    <style name="Theme.TinTok" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="windowActionModeOverlay">true</item>
+
+        <item name="colorPrimary">@color/primaryColor</item> <!-->@color/primaryColor -->
+        <item name="colorOnPrimary">@color/primaryOnColor</item> <!-- @color/primaryTextColor-->
+        <item name="colorPrimaryDark">@color/primaryDarkColor</item> <!--@color/primaryColor -->
+        <item name="colorAccent">@color/secondaryBlue</item> <!-- @color/secondaryColor / darkgray /-->
+        <item name="colorError">@color/red</item>
+        <item name="colorOnError">#FFFFFF</item>
+
+        <item name="radioButtonStyle">@style/RadioButtonStyle</item>
+
+        <item name="toolbarStyle">@style/MaterialToolbar</item>
+
+        <item name="materialButtonOutlinedStyle">@style/MaterialButtonOutlinedStyle</item>
+
+        <item name="bottomNavigationStyle">@style/MaterialBottomNavigation</item>
+
+    </style>
+
+
+
+
+
+</resources>
